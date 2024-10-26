@@ -1,0 +1,47 @@
+
+:root {
+  --bgColor: black;
+  --textColor: #ecf0f1;
+  --activeColor: black;
+}
+
+
+.bg-bgColor {
+  background-color: var(--bgColor);
+}
+
+.text-textColor {
+  color: var(--textColor);
+}
+
+.sidebar-item:hover {
+  background-color: var(--activeColor);
+}
+
+
+@media (max-width: 1024px) {
+  .sidebar-text {
+    opacity: 0;
+    position: absolute;
+    left: 3rem;
+    white-space: nowrap;
+    background-color: var(--bgColor);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: opacity 0.3s ease;
+  }
+
+  .sidebar-item:hover .sidebar-text {
+    opacity: 1;
+  }
+
+
+  .sidebar-item {
+    justify-content:center;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
