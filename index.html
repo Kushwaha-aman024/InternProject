@@ -6,11 +6,19 @@
   <title>Responsive Sidebar with Tailwind</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sidebar.css">
 </head>
 <body class="bg-gray-100">
-  <aside class="sidebar bg-bgColor text-textColor h-screen w-64 fixed flex flex-col p-4">
+  <aside class="sidebar bg-bgColor text-textColor h-screen w-40 fixed flex flex-col p-4">
+    <div class="flex items-center space-x-3 mb-6">
+      <img src="logo.png" alt="Logo" class="w-8 h-8">
+      <h1 class="text-lg font-semibold">Sell Tech IND</h1>
+    </div>
+    
     <ul class="space-y-4">
+      <li class="sidebar-item flex items-center space-x-4 p-2 rounded-md cursor-pointer tablet-only" onclick="setActive(this)">
+        <span class="sidebar-text">MAIN APP</span>
+      </li>
       <li class="sidebar-item flex items-center space-x-4 p-2 rounded-md cursor-pointer" onclick="setActive(this)">
         <i class="fas fa-home text-xl"></i>
         <span class="sidebar-text">Home</span>
@@ -27,9 +35,8 @@
         <i class="fas fa-chart-line text-xl"></i>
         <span class="sidebar-text">Analytics</span>
       </li>
-      <li class="sidebar-item flex items-center space-x-4 p-2 rounded-md cursor-pointer" onclick="setActive(this)">
-        <i class="fas fa-ellipsis-h text-xl"></i>
-        <span class="sidebar-text">Others</span>
+      <li class="sidebar-item flex items-center space-x-4 p-2 rounded-md cursor-pointer tablet-only" onclick="setActive(this)">
+        <span class="sidebar-text">OTHERS</span>
       </li>
       <li class="sidebar-item flex items-center space-x-4 p-2 rounded-md cursor-pointer" onclick="setActive(this)">
         <i class="fas fa-calendar-alt text-xl"></i>
